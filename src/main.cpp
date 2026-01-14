@@ -23,6 +23,7 @@ int main()
     GLFWwindow *window = glfwCreateWindow(800, 600, "Learn Opengl", nullptr, nullptr);
 
     glfwMakeContextCurrent(window);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
